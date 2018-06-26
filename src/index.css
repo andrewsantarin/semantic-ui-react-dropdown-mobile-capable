@@ -1,0 +1,53 @@
+@media only screen and (min-width: 768px) {
+  .dropdown--dummy, .dropdown--background {
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .ui.active.selection.dropdown {
+    position: fixed;
+    top: 30px;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    border: 0 none transparent !important;
+    background: transparent !important;
+  }
+
+  .ui.active.selection.dropdown:hover {
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+  }
+
+  .ui.active.selection.dropdown.fluid {
+    width: auto;
+  }
+
+  .ui.active.selection.dropdown .menu {
+    border-radius: .28571429rem;
+    border-top-width: 1px !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    max-height: 100%;
+  }
+
+  .dropdown--background {
+    /* background: rgba(0, 0, 0, 0.5); */
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 10;
+
+    /**
+     * iOS software design issue.
+     * https://github.com/Semantic-Org/Semantic-UI-React/issues/1832
+     * https://github.com/Semantic-Org/Semantic-UI-React/pull/1833#issuecomment-313713611
+     */
+    cursor: pointer;
+  }
+}
